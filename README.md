@@ -2,7 +2,7 @@ Create a super hero search REST API that lets to you search for heroes by name, 
 
 No client side required. Just make sure everything works in Postman and document the API usage
 
-Create a ExpressJS app
+Create an ExpressJS app
 
 Details:
 
