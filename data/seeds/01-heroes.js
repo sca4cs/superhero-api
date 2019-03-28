@@ -7,7 +7,7 @@ exports.seed = function(knex, Promise) {
       return knex('heroes').insert([
         {name: 'Iron Man', power: 'powered armor suit', universe: 'Marvel'},
         {name: 'Wolverine', power: 'healing, hand-to-hand combat', universe: 'Marvel'},
-        {name: 'Spider-Man', power: 'wall-crawling, enhanced reflexes, spider-sense', universe: 'Marvel'},
+        {name: 'Spider Man', power: 'wall-crawling, enhanced reflexes, spider-sense', universe: 'Marvel'},
         {name: 'Captain America', power: 'agility, strength, speed', universe: 'Marvel'},
         {name: 'Thor', power: 'strength, speed, endurance', universe: 'Marvel'},
         {name: 'Black Panther', power: 'strength, speed, agility, healing, reflexes', universe: 'Marvel'},
