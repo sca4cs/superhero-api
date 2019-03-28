@@ -1,12 +1,17 @@
 const express = require('express');
 const helmet = require('helmet');
 const knex = require('knex');
-const dbConfig = require('./knexfile');
-const db = knex(dbConfig.development);
+const cors = require('cors');
+require('dotenv').config();
+
+const dbEngine = process.env.DB || 'development';
+const dbConfig = require('./knexfile')[dbEngine];
+const db = knex(dbConfig);
 const server = express();
 
 server.use(helmet());
 server.use(express.json());
+server.use(cors({ origin: "*" }));
 
 server.get('/', (req, res) => {
     res.status(200).send("Welcome to the superhero API -- Search for heroes by name, power, and comic universe");
@@ -57,7 +62,7 @@ server.get('/universe/:universe', (req, res) => {
 })
 
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 server.listen(port, function() {
   console.log(`\n=== Web API Listening on http://localhost:${port} ===\n`);
 });
