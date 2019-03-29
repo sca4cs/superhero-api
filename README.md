@@ -12,7 +12,7 @@ Search for heroes by name, power, and comic universe
 
 ---
 
-  All of the search endpoints are case-insensitive. Do not include spaces, but do include dashes where necessary.
+  All of the search endpoints are case-insensitive. Do not include spaces, but do include dashes where necessary. You can only search for one thing at a time (do not combine search terms).
 
 
   For example, this search: `https://my-superhero-api.herokuapp.com/heroes/greenarrow`
